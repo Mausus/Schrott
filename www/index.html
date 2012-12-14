@@ -1,10 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<title>tittle</title>
-		<script>
-			window.location='./main.html';
-		</script>
-	<body style="background-image:url(bilder/ConcevisImg.png)">		
-	</body>
+    <head>
+    
+    <title>Concevis AG Prototype</title>
+    
+  	<!-- Theme kommt hier rein -->
+    
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+	<link href='http://fonts.googleapis.com/css?family=Leckerli+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Noticia+Text' rel='stylesheet' type='text/css'>
+	
+	<script src="jquery-1.8.3.min.js"></script>
+	
+	<script src="jquery.mobile-1.2.0.min.js"></script>	
+	
+	<script type="text/javascript" src="https://www.google.com/jsapi"></script> 
+	<script type="text/javascript">
+		google.load("maps", "3", {'other_params':'sensor=true'});
+	</script>
+    
+	<link rel="stylesheet" href="css/style.css" />
+	<link rel="stylesheet" href="css/style-histo.css" />
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	
+</head>
+<body> 
+
+<div data-role="page" id="startseite" data-theme="b">
+    <div data-role="content">
+        
+        <h2>Willkommen bei Concevis</h2>
+    <div id="loginform">
+		
+		<form id="ajax_form" action="" methode='POST'>
+		<input type="text" id="acct" name="acct" placeholder="Account">
+		<input type="password" id="password" name="pass" placeholder="Password">
+		<input type="submit" data-role="button" data-icon="check" data-transition="flip" name="loginbtn" value="Login">
+		</form>
+		<a href="startseite.html" data-transition="slide">Debugging</a>
+	</div>
+	</div>
+
+<script src="cordova-2.2.0.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/geo.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/function.js" type="text/javascript" charset="utf-8"></script>
+
+</div>	
+	
+</body>
 </html>
