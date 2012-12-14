@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    	<title>Concevis AG Prototype</title>
+    
+  		<!-- Theme kommt hier rein -->
+	
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+	
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	
+	</head>
+<body> 
+<div data-role="page" id="historyui" data-theme="b">
+	<div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="b">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#./startseite.html" data-transition="slide" >Übersicht</a></li>
+				<li><a href="#./history.html" data-transition="slide">Belege</a></li>
+				<li><a href="#./Geo.html" data-transition="slide">Geo</a></li>
+				<li><a href="camera.html" rel="external" data-transition="flow">Upload</a></li>
+			</ul>
+		</div>
+	</div>
+	
+	<h3>Filialen</h3>
+
+	<section id="listview">
+		<ul class="liste"></ul>
+	</section>
+
+<script>
+//laden der json Datei und befüllen der Tabelle
+
+$.getJSON('faddress.json', function(json){
+	var erg = json;
+	$.each(json, function(i, daten){
+		//Kartenausschnitt + Entfernungberechnung
+		var actual_km_dis = entfernungBerechnen(mylongitude,mylatitude,daten.Position.Longitude,daten.Position.Latitude);
+		var ausschnitt = 'http://maps.googleapis.com/maps/api/staticmap?size=50x50&markers=color:blue|size:tiny|'+daten.Position.Latitude+','+daten.Position.Longitude+'&sensor=true';
+			$('#listview').find('ul.liste').append('<li><img src="'+ausschnitt+'"><a class="alist">'+i+'</a><span>'+ entfernungBerechnen(mylongitude,mylatitude,daten.Position.Longitude,daten.Position.Latitude )+'</span></li>');
+	});
+});
+</script>
+
+	<div data-position="fixed" data-role="footer" data-theme="b" data-tap-toggle="false">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="main.html" rel="external" data-icon="minus" data-transition="flow" data-iconpos="top">Logout</a></li>
+				<li><a href="#" data-icon="grid" data-transition="flow" data-iconpos="top" class="ui-btn-active">Liste</a></li>
+				<li><a href="#./help.html" data-icon="kontakt" data-transition="slide" data-iconpos="top">Help</a></li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>
+<!--entfernungBerechnen(mylongitude,mylatitude,daten.Position.Longitude,daten.Position.Latitude)-->

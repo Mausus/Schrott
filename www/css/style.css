@@ -1,0 +1,153 @@
+/*[data-role=page] {
+background-image: url(../bilder/escheresque.png);
+}*/
+
+[data-role=page] {
+background-image: url(../bilder/blu_stripes.png);
+}
+.schatten {
+width:80%;
+height:auto;
+border:6px solid #fff;
+box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.85);
+-webkit-transform:rotate(1deg);
+}
+
+.footer-wrapper {
+position: absolute;
+bottom: 0px;
+width: 100%;
+}
+
+h2 {
+/*font-family: 'Leckerli One', cursive;
+font-weight: normal;*/
+font-family: arial, sans-serif;
+font-weight: normal;
+color:#173b84;
+font-size:2.5em;
+line-height:1em;
+text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
+text-align:center;
+}
+
+h3 {
+font-family: Comic Sans MS, sans-serif;
+font-weight: normal;
+color:#173b84;
+font-size:2em;
+line-height:1em;
+text-shadow: 1px 1px 0px rgba(255, 255, 255, 1);
+text-align:center;
+}
+
+.ui-icon-kontakt {
+	background-image: url(../bilder/mail-icon.png);
+	background-size: 18px 18px;
+}
+
+#karte {
+position:Absolute;
+top:6%;
+bottom:0;
+left:0;
+right:0;
+background-image: url(../bilder/ajax-loader-trans.gif);
+background-repeat: no-repeat;
+background-position: center;
+}
+/*
+#camera {
+position:absolute;
+top:60%;
+left:5%;
+-webkit-transform:rotate(338deg);
+}
+
+#album {
+position:absolute;
+top:60%;
+right:5%;
+-webkit-transform:rotate(26deg);
+}
+*/
+a.abd{
+color:black; 
+}
+
+a.alist {
+position:relative;
+bottom:50%;
+left:4%;
+}
+
+.ui-body-a .ui-link-inherit {
+	color:  	#333333  /*{a-body-color}*/;
+}
+
+.ui-body-a .ui-link {
+	color:  #2489CE  /*{a-body-link-color}*/;
+	font-weight: bold;
+}
+
+.ui-body-a .ui-link:hover {
+	color:  #2489CE  /*{a-body-link-hover}*/;
+}
+
+.ui-body-a .ui-link:active {
+	color:  #2489CE  /*{a-body-link-active}*/;
+}
+
+.ui-body-a .ui-link:visited {
+    color:  #2489CE  /*{a-body-link-visited}*/;
+}
+
+ul.liste {
+padding: 0;
+margin: 9px;
+list-style: none;
+border: 1px solid #a1a7ad;
+border-radius: 8px;
+
+font-weight: bold;
+box-shadow: 0 1px 0 #fff;
+}
+
+nav:visited {
+color:black;
+}
+
+ul.liste li {
+background: #f7f7f7;
+border-top: 1px solid #fdfdfd;
+border-bottom: 1px solid #cacaca;
+padding: 5px 10px;
+line-height: 30px;
+font-size:12px;
+height: 50px;
+}
+
+ul.liste li:first-child {
+border-top-left-radius: 8px;
+border-top-right-radius: 8px;
+border-top-color: #e5e5e5;
+}
+
+ul.liste li:last-child {
+border-bottom-left-radius: 8px;
+border-bottom-right-radius: 8px;
+}
+
+[data-role=content] p, li {
+font-family: 'Noticia Text', serif;
+}
+
+ul.liste li span {
+float: right;
+display: block;
+color: #999;
+font-weight: normal;
+position:relative;
+top:10%;
+bottom:10%;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Concevis AG Prototype</title>
+	
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+		
+</head>
+<body> 
+
+<div data-role="page" id="startseite" data-theme="b">
+    <div data-role="header" data-position="fixed" data-tap-toggle="false" data-theme="b">
+			<div data-role="navbar" data-fullscreen="true">
+				<ul>
+					<li><a href="#" class="ui-btn-active">Übersicht</a></li>
+					<li><a href="#./history.html" data-transition="slide">Belege</a></li>
+					<li><a href="Geo.html" rel="external" data-transition="slide">Geo</a></li>
+					<li><a href="camera.html" rel="external" data-transition="slide">Upload</a></li>
+				</ul>
+			</div>
+		</div>
+    <div data-role="content">
+        
+        
+    <div id="loginform">
+		
+		<form id="forom" action='' methode='POST'>
+		<div data-role="fieldcontain">
+		<label for="vname">Vorname</label>
+		<input type="text" id="vname" name="vname" value="" placeholder="Vorname" readonly/>
+		</div>
+	<div data-role="fieldcontain">
+		<label for="nname">Nachname</label>
+		<input type="text" id="nname" name="nname" value="" placeholder="Nachname"  readonly/>
+	</div>
+	<div data-role="fieldcontain">
+		<label for="strasse">Adresse</label>
+		<input type="text" id="strasse" name="strasse" value="" placeholder="Strasse" />
+		<label for="ort"></label>
+		<input type="text" id="ort" name="ort" value="" placeholder="Ort" />
+	</div>
+	<div data-role="fieldcontain">	
+		<label for="email">Email</label>
+		<input type="text" id="email" name="email" value="" placeholder="MustermanMax@abc.de" />
+	</div>
+	<div data-role="fieldcontain">
+		<label for="tel">Telefon</label>
+		<input type="text" id="tel" name="tel"  value="" placeholder="Telefon" />
+	</div>
+		<input type="submit" data-role="button" data-icon="check" data-transition="flip" name="aktbtn" value="Aktualisieren">
+		</form>  	
+	</div>
+	<script src="js/function.js" type="text/javascript" charset="utf-8"></script>
+	</div>
+	
+<div data-position="fixed" data-role="footer" data-theme="b" data-tap-toggle="false">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="index.html" rel="external" data-icon="minus" data-transition="flow" data-iconpos="top">Logout</a></li>
+				<li><a href="help.html" data-icon="kontakt" data-transition="slide" data-iconpos="top">Hilfe</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
